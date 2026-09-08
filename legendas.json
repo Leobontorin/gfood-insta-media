@@ -1,0 +1,246 @@
+{
+  "_regras": "Banco rotativo GFOOD. Robo usa 'proxima' e avanca. Editar a vontade.",
+  "proxima": 0,
+  "legendas": [
+    {
+      "texto": "A água mudou. 💧\n\n25g de proteína da carne, sem açúcar e sem gás. Parece água. Entrega proteína.\n\nGFOOD Água Proteica.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#25g",
+        "#BeefProtein",
+        "#SemAcucar"
+      ]
+    },
+    {
+      "texto": "Gelada resolve. 🧊\n\nDepois do treino, no calor, no meio do dia. 25g de proteína no formato mais leve que existe.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#PosTreino",
+        "#Gelada",
+        "#25g"
+      ]
+    },
+    {
+      "texto": "Não é whey. Não é shake. É água. 💪\n\nProteína da carne dissolvida em água: sem pó, sem shaker, sem peso no estômago.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#SemShaker",
+        "#ProteinaDaCarne",
+        "#Fitness"
+      ]
+    },
+    {
+      "texto": "Hidrata. Fortalece. Nutre. ⚡\n\nTrês coisas em uma lata de 355ml. Sabor abacaxi com hortelã.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#Hidratacao",
+        "#Proteina",
+        "#AbacaxiComHortela"
+      ]
+    },
+    {
+      "texto": "Seu pós-treino agora é assim. 🥫\n\nAbriu, bebeu, recuperou. 25g de proteína sem açúcar e sem gás.",
+      "hashtags": [
+        "#GFOOD",
+        "#PosTreino",
+        "#AguaProteina",
+        "#Treino",
+        "#25g"
+      ]
+    },
+    {
+      "texto": "Proteína virou coisa de todo dia. ☀️\n\nNa academia, no escritório, na correria. GFOOD acompanha.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#RotinaSaudavel",
+        "#Lifestyle",
+        "#25g"
+      ]
+    },
+    {
+      "texto": "Abacaxi com hortelã. 🍍🌿\n\nRefrescante de verdade. Zero açúcar, zero gás, 25g de proteína.",
+      "hashtags": [
+        "#GFOOD",
+        "#AbacaxiComHortela",
+        "#AguaProteina",
+        "#SemAcucar",
+        "#Refrescante"
+      ]
+    },
+    {
+      "texto": "Aposenta o shaker. 🥤➡️🥫\n\nProteína da carne, gelada, na mão. Sem pó e sem bagunça.",
+      "hashtags": [
+        "#GFOOD",
+        "#AposentaOShaker",
+        "#AguaProteina",
+        "#PosTreino",
+        "#SemShaker"
+      ]
+    },
+    {
+      "texto": "Leve como água. Forte como proteína. 💧💪\n\nGFOOD Água Proteica: 25g por lata.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#Proteina",
+        "#25g",
+        "#BeefProtein"
+      ]
+    },
+    {
+      "texto": "Corre. Recupera. Repete. 🏃\n\n25g de proteína pra fechar o treino do jeito certo.",
+      "hashtags": [
+        "#GFOOD",
+        "#Corrida",
+        "#Running",
+        "#Recuperacao",
+        "#AguaProteina"
+      ]
+    },
+    {
+      "texto": "Sem açúcar. Sem gás. Sem desculpa. ⚡\n\nProteína que cabe em qualquer rotina.",
+      "hashtags": [
+        "#GFOOD",
+        "#SemAcucar",
+        "#AguaProteina",
+        "#Fitness",
+        "#VidaSaudavel"
+      ]
+    },
+    {
+      "texto": "Não precisa parecer suplemento. 💼\n\nNa mesa, na mochila, na reunião. Proteína discreta e gelada.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#VidaCorporativa",
+        "#SaudeNoTrabalho",
+        "#25g"
+      ]
+    },
+    {
+      "texto": "25g. E segue o dia. 🚶\n\nProteína da carne em água. Simples assim.",
+      "hashtags": [
+        "#GFOOD",
+        "#25g",
+        "#AguaProteina",
+        "#RotinaSaudavel",
+        "#Lifestyle"
+      ]
+    },
+    {
+      "texto": "Faz parte. 🌅\n\nOnde tem movimento, cabe uma GFOOD.",
+      "hashtags": [
+        "#GFOOD",
+        "#FazParte",
+        "#AguaProteina",
+        "#Comunidade",
+        "#Movimento"
+      ]
+    },
+    {
+      "texto": "Rico em vitaminas do complexo B, magnésio e zinco. 🧠\n\nMais que proteína: nutrição de verdade em 355ml.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#Nutricao",
+        "#ComplexoB",
+        "#Magnesio"
+      ]
+    },
+    {
+      "texto": "A evolução da água. 💧\n\nGFOOD Água Proteica. 25g de proteína da carne, sabor abacaxi com hortelã.",
+      "hashtags": [
+        "#GFOOD",
+        "#EvolucaoDaAgua",
+        "#AguaProteina",
+        "#25g",
+        "#Inovacao"
+      ]
+    },
+    {
+      "texto": "Treinou? Hidrata e recupera no mesmo gole. 🔁\n\nSem açúcar, sem gás, 25g de proteína.",
+      "hashtags": [
+        "#GFOOD",
+        "#Treino",
+        "#Hidratacao",
+        "#Recuperacao",
+        "#AguaProteina"
+      ]
+    },
+    {
+      "texto": "Gelada, na mão, pronta. 🧊\n\nProteína nunca foi tão fácil.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#Pronta",
+        "#Gelada",
+        "#25g"
+      ]
+    },
+    {
+      "texto": "Proteína da carne. Em água. 🥩💧\n\nA GFOOD fez o que ninguém tinha feito.",
+      "hashtags": [
+        "#GFOOD",
+        "#BeefProtein",
+        "#AguaProteina",
+        "#Inovacao",
+        "#25g"
+      ]
+    },
+    {
+      "texto": "Seu corpo pede proteína. Seu dia pede praticidade. ⚡\n\nGFOOD entrega os dois.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#Praticidade",
+        "#Proteina",
+        "#VidaSaudavel"
+      ]
+    },
+    {
+      "texto": "Performance em movimento. 🏋️\n\n355ml, 25g de proteína, zero açúcar.",
+      "hashtags": [
+        "#GFOOD",
+        "#Performance",
+        "#AguaProteina",
+        "#Fitness",
+        "#25g"
+      ]
+    },
+    {
+      "texto": "Onde compra? 📍\n\nLink na bio: gfoodbrasil.com.br",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#OndeComprar",
+        "#25g",
+        "#Brasil"
+      ]
+    },
+    {
+      "texto": "Sabor que refresca, proteína que sustenta. 🍍🌿\n\nAbacaxi com hortelã, 25g por lata.",
+      "hashtags": [
+        "#GFOOD",
+        "#AbacaxiComHortela",
+        "#AguaProteina",
+        "#Sabor",
+        "#25g"
+      ]
+    },
+    {
+      "texto": "O novo normal da proteína. 🥫\n\nÁgua proteica não é moda. É o próximo passo.",
+      "hashtags": [
+        "#GFOOD",
+        "#AguaProteina",
+        "#NovoNormal",
+        "#Proteina",
+        "#Evolucao"
+      ]
+    }
+  ]
+}
