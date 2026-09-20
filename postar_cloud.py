@@ -39,6 +39,52 @@ def git(*args):
         fail(f"git {args[0]}: {(r.stderr or r.stdout)[-300:]}")
     return r.stdout
 
+VIDEOS = os.path.join(REPO_DIR, "videos")
+AGENDA = os.path.join(VIDEOS, "agenda.json")
+
+def reel_pendente(hoje):
+    """Primeiro Reel agendado com data <= hoje e ainda nao postado."""
+    if not os.path.exists(AGENDA):
+        return None, None
+    ag = json.load(open(AGENDA, encoding="utf-8"))
+    for it in ag["reels"]:
+        if not it.get("media_id") and it["data"] <= hoje and os.path.exists(os.path.join(VIDEOS, it["arquivo"])):
+            return ag, it
+    return ag, None
+
+def postar_reel(token, ig_user, ag, it, hoje):
+    url = f"{SITE_URL}/videos/{it['arquivo']}"
+    for _ in range(60):
+        try:
+            if requests.head(url, timeout=20, allow_redirects=True).status_code == 200:
+                break
+        except requests.RequestException:
+            pass
+        time.sleep(5)
+    else:
+        fail(f"Pages nao serviu {url} em 5 min")
+    j = requests.post(f"{API}/{ig_user}/media", data={"media_type": "REELS", "video_url": url,
+                      "caption": it["legenda"], "share_to_feed": "true", "access_token": token}, timeout=120).json()
+    if "id" not in j:
+        fail(f"container reel falhou: {json.dumps(j)[:300]}")
+    creation = j["id"]
+    for _ in range(60):  # video processa mais devagar: ate 5 min
+        s = requests.get(f"{API}/{creation}", params={"fields": "status_code,status", "access_token": token}, timeout=30).json()
+        if s.get("status_code") == "FINISHED":
+            break
+        if s.get("status_code") == "ERROR":
+            fail(f"container reel erro: {json.dumps(s)[:300]}")
+        time.sleep(5)
+    else:
+        fail("reel nao terminou de processar em 5 min")
+    j = requests.post(f"{API}/{ig_user}/media_publish", data={"creation_id": creation, "access_token": token}, timeout=120).json()
+    if "id" not in j:
+        fail(f"media_publish reel falhou: {json.dumps(j)[:300]}")
+    it["media_id"] = j["id"]
+    it["postado_em"] = datetime.now(BRT).isoformat(timespec="seconds")
+    json.dump(ag, open(AGENDA, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    return j["id"]
+
 def main():
     token = os.environ["IG_TOKEN"]
     ig_user = os.environ["IG_USER_ID"]
@@ -47,6 +93,20 @@ def main():
     reg = json.load(open(REG, encoding="utf-8"))
     if any(p["data"] == hoje for p in reg["posts"]):
         log("Ja postou hoje. Nada a fazer.")
+        return
+
+    # dia de Reel agendado: posta o video no lugar da arte
+    ag, it = reel_pendente(hoje)
+    if it:
+        media_id = postar_reel(token, ig_user, ag, it, hoje)
+        reg["posts"].append({"data": hoje, "arquivo": it["arquivo"], "media_id": media_id, "tipo": "reel",
+                             "origem": "cloud", "postado_em": datetime.now(BRT).isoformat(timespec="seconds")})
+        json.dump(reg, open(REG, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+        git("add", "-A")
+        git("-c", "user.name=GFOOD Bot", "-c", "user.email=bontorin17@gmail.com",
+            "commit", "-qm", f"reel postado {hoje} media {media_id}")
+        git("push", "-q")
+        log(f"REEL POSTADO {it['arquivo']} -> media {media_id}.")
         return
 
     os.makedirs(FILA, exist_ok=True)
