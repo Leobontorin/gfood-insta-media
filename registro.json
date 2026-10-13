@@ -271,6 +271,14 @@
       "legenda": 4,
       "origem": "cloud",
       "postado_em": "2026-10-12T19:28:32-03:00"
+    },
+    {
+      "data": "2026-10-13",
+      "arquivo": "ChatGPT Image 20 de set. de 2026, 12_23_47.png",
+      "media_id": "18419965759159176",
+      "legenda": 5,
+      "origem": "local-fallback",
+      "postado_em": "2026-10-13T14:35:33"
     }
   ]
 }
